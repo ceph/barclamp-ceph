@@ -1,0 +1,3 @@
+[submodule "repos/ceph-cookbooks"]
+	path = repos/ceph-cookbooks
+	url = https://github.com/NewDreamNetwork/ceph-cookbooks.git

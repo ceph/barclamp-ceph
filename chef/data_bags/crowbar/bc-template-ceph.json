@@ -1,0 +1,26 @@
+{
+  "id": "bc-template-ceph",
+  "description": "Installation for Ceph",
+  "attributes": {
+    "ceph": {
+      "foo": "bar"
+    }
+  },
+  "deployment": {
+    "ceph": {
+      "crowbar-revision": 0,
+      "elements": {},
+      "element_order": [
+        [ "ceph-mon" ],
+        [ "ceph-store" ]
+      ],
+      "config": {
+        "environment": "ceph-base-config",
+        "mode": "full",
+        "transitions": false,
+        "transition_list": [
+        ]
+      }
+    }
+  }
+}
