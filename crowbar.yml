@@ -2,6 +2,8 @@ barclamp:
   name: ceph
   display: Ceph
   version: 0
+  requires:
+    - @crowbar
 
   os_support:
     - ubuntu-10.10
@@ -9,11 +11,11 @@ barclamp:
 crowbar:
   layout: 1
 
-# TODO shouldn't hardcode maverick, crowbar is not flexible enough yet
 # TODO crowbar *and* chef cookbooks don't really need -dbg
 debs:
-  repos:
-    - deb http://ceph.newdream.net/debian/ maverick main
+  ubuntu-10.10:
+    repos:
+      - deb http://ceph.newdream.net/debian/ maverick main
   pkgs:
     - ceph
     - ceph-common
