@@ -12,7 +12,8 @@
           "type": "map",
           "required": true,
           "mapping": {
-            "foo": { "type": "str", "required": true }
+            "moniter-secret": { "type": "str", "required": true },
+            "fsid": { "type": "str", "required": true }
           }
         }
       }

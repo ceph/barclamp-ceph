@@ -3,7 +3,8 @@
   "description": "Installation for Ceph",
   "attributes": {
     "ceph": {
-      "foo": "bar"
+      "moniter-secret": "GENERATED",
+      "fsid": "GENERATED"
     }
   },
   "deployment": {
