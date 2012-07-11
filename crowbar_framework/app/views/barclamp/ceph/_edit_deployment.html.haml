@@ -4,7 +4,9 @@
 
 :javascript
   $(document).ready(function(){
-    var constraints = { "ceph-mon": { "unique": true, "count": 1 }, "ceph-store": { "count": -1 } };
+    var constraints = {
+	"ceph-mon": { "unique": true, "count": 1 }, 
+	"ceph-store": { "count": -1 } };
     node_selector($('#drag_drop'), constraints);
   });
 
