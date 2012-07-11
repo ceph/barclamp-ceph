@@ -4,7 +4,7 @@
   "attributes": {
     "ceph": {
       "config": {
-        "moniter-secret": "GENERATED",
+        "monitor_secret": "GENERATED",
         "fsid": "GENERATED",
         "mon_initial_members": ""
       }
