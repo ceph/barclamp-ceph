@@ -3,15 +3,18 @@
   "description": "Installation for Ceph",
   "attributes": {
     "ceph": {
-      "moniter-secret": "GENERATED",
-      "fsid": "GENERATED"
+      "config": {
+        "moniter-secret": "GENERATED",
+        "fsid": "GENERATED",
+        "mon_initial_members": ""
+      }
     }
   },
   "deployment": {
     "ceph": {
       "crowbar-revision": 0,
       "element_states":{
-	"ceph-mon": [ "readying", "ready", "applying" ],
+        "ceph-mon": [ "readying", "ready", "applying" ],
         "ceph-store": [ "readying", "ready", "applying" ]
       },
       "elements": {},

@@ -12,8 +12,15 @@
           "type": "map",
           "required": true,
           "mapping": {
-            "moniter-secret": { "type": "str", "required": true },
-            "fsid": { "type": "str", "required": true }
+            "config": {
+              "type": "map",
+              "required": true,
+              "mapping": {
+                "moniter-secret": { "type": "str", "required": true },
+                "fsid": { "type": "str", "required": true },
+                "mon_initial_members": {"type": "str", "required": true }
+              }
+            }
           }
         }
       }
