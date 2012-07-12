@@ -23,8 +23,12 @@ class CephService < ServiceObject
   def create_proposal
     @logger.debug("Ceph create_proposal: entering")
     base = super
+
+    base["attributes"]["ceph"]["config"]["fsid"] = `uuidgen`
+    
     @logger.debug("Ceph create_proposal: exiting")
     base
+
   end
 
 end

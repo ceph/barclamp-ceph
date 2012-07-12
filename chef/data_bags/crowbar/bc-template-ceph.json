@@ -5,7 +5,7 @@
     "ceph": {
       "config": {
         "monitor_secret": "GENERATED",
-        "fsid": "GENERATED",
+	"fsid": "",
         "mon_initial_members": ""
       }
     }
