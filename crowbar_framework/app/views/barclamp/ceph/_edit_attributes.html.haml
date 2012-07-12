@@ -6,12 +6,12 @@
   %div.container
     %p
       %label{ :for => :fsid }= t('.fsid')
-      %input#fsid{:type => "text", :name => "fsid", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["fsid"], :onchange => "update_value('fsid', 'fsid', 'string')"}
+      %input#fsid{:type => "text", :name => "fsid", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["fsid"], :onchange => "update_value('config/fsid', 'fsid', 'string')"}
     %p
       %label{ :for => :mon_initial_members }= t('.mon_initial_members')
-      %input#mon_initial_members{:type => "text", :name => "mon_initial_members", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["mon_initial_members"], :onchange => "update_value('mon_initial_members', 'mon_initial_members', 'string')"}
+      %input#mon_initial_members{:type => "text", :name => "mon_initial_members", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["mon_initial_members"], :onchange => "update_value('config/mon_initial_members', 'mon_initial_members', 'string')"}
     %p
       %label{ :for => :monitor_secret }= t('.monitor_secret')
-      %input#monitor_secret{:type => "text", :name => "monitor_secret", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["monitor_secret"], :onchange => "update_value('monitor_secret', 'monitor_secret', 'string')"}
+      %input#monitor_secret{:type => "text", :name => "monitor_secret", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["monitor_secret"], :onchange => "update_value('config/monitor_secret', 'monitor_secret', 'string')"}
 
 
