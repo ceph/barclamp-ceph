@@ -5,15 +5,27 @@ barclamp:
 
   os_support:
     - ubuntu-10.10
+    - ubuntu-11.04
+    - ubuntu-11.10
+    - ubuntu-12.04
 
 crowbar:
   layout: 1
 
-# TODO shouldn't hardcode maverick, crowbar is not flexible enough yet
 # TODO crowbar *and* chef cookbooks don't really need -dbg
 debs:
-  repos:
-    - deb http://ceph.newdream.net/debian/ maverick main
+  ubuntu-10.10:
+    repos:
+      - deb http://ceph.com/debian/ maverick main
+  ubuntu-11.04:
+    repos:
+      - deb http://ceph.com/debian/ natty main
+  ubuntu-11.10:
+    repos:
+      - deb http://ceph.com/debian/ oneiric main
+  ubuntu-12.04:
+    repos:
+      - deb http://ceph.com/debian/ precise main
   pkgs:
     - ceph
     - ceph-common
