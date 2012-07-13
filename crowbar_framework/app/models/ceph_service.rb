@@ -31,7 +31,18 @@ class CephService < ServiceObject
     
     @logger.debug("Ceph create_proposal: exiting")
     base
-
   end
+  
+    def apply_role_pre_chef_call(old_role, role, all_nodes)
+      @logger.debug("Ceph apply_role_pre_chef_call: entering #{all_nodes.inspect}")
+                                                            
+      mon_nodes = role.override_attributes["ceph"]["elements"]["ceph-mon"]
+      unless mon_nodes.nil? or mon_nodes.empty?
+        mon_nodes.each do |n|
+          node = NodeObject.find_node_by_name n
+          @logger.debug("Ceph assign node[:ceph-mon] for #{n}")
+        end
+      end
+    end
 
 end
