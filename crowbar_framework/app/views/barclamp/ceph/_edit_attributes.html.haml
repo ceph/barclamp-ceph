@@ -8,9 +8,6 @@
       %label{ :for => :fsid }= t('.fsid')
       %input#fsid{:style => "width:280px;", :type => "text", :name => "fsid", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["fsid"], :onchange => "update_value('config/fsid', 'fsid', 'string')"}
     %p
-      %label{ :for => :mon_initial_members }= t('.mon_initial_members')
-      %input#mon_initial_members{:type => "text", :name => "mon_initial_members", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["mon_initial_members"], :onchange => "update_value('config/mon_initial_members', 'mon_initial_members', 'string')"}
-    %p
       %label{ :for => :monitor_secret }= t('.monitor_secret')
       %input#monitor_secret{:style => "width:340px;", :type => "text", :name => "monitor_secret", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["monitor_secret"], :onchange => "update_value('config/monitor_secret', 'monitor_secret', 'string')"}
 
