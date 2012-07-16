@@ -46,6 +46,7 @@ class CephService < ServiceObject
         end
       @logger.debug("Shortname array: #{shortname.inspect}")
       role.default_attributes["ceph"]["config"]["mon_initial_members"] = shortname
+      role.save
       end
     end
 
