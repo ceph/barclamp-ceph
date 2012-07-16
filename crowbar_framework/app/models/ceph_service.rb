@@ -37,11 +37,15 @@ class CephService < ServiceObject
       @logger.debug("Ceph apply_role_pre_chef_call: entering #{all_nodes.inspect}")
                                                             
       mon_nodes = role.override_attributes["ceph"]["elements"]["ceph-mon"]
+      shortname = Array.new
       unless mon_nodes.nil? or mon_nodes.empty?
         mon_nodes.each do |n|
           node = NodeObject.find_node_by_name n
+          shortname.push(n.split(".").first)
           @logger.debug("Ceph assign node[:ceph-mon] for #{n}")
         end
+      @logger.debug("Shortname array: #{shortname.inspect}")
+      role.default_attributes["ceph"]["config"]["mon_initial_members"] = shortname
       end
     end
 
