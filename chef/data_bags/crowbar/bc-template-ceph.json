@@ -3,8 +3,8 @@
   "description": "Installation for Ceph",
   "attributes": {
     "ceph": {
+      "monitor-secret": "",
       "config": {
-        "monitor_secret": "",
         "fsid": "",
         "mon_initial_members": ""
       }

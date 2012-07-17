@@ -12,11 +12,11 @@
           "type": "map",
           "required": true,
           "mapping": {
+            "monitor-secret": { "type": "str" },
             "config": {
               "type": "map",
               "required": true,
               "mapping": {
-                "monitor_secret": { "type": "str", "required": true },
                 "fsid": { "type": "str" },
                 "mon_initial_members": {"type": "str", "required": true }
               }

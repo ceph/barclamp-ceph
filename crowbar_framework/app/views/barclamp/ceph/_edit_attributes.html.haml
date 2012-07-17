@@ -9,6 +9,6 @@
       %input#fsid{:style => "width:280px;", :type => "text", :name => "fsid", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["fsid"], :onchange => "update_value('config/fsid', 'fsid', 'string')"}
     %p
       %label{ :for => :monitor_secret }= t('.monitor_secret')
-      %input#monitor_secret{:style => "width:340px;", :type => "text", :name => "monitor_secret", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["config"]["monitor_secret"], :onchange => "update_value('config/monitor_secret', 'monitor_secret', 'string')"}
+      %input#monitor_secret{:style => "width:360px;", :type => "text", :name => "monitor_secret", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["monitor-secret"], :onchange => "update_value('monitor-secret', 'monitor_secret', 'string')"}
 
 
