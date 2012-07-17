@@ -42,6 +42,7 @@ class CephService < ServiceObject
         mon_nodes.each do |n|
           node = NodeObject.find_node_by_name n
           shortname.push(n.split(".").first)
+          shortname.push(",")
           @logger.debug("Ceph assign node[:ceph-mon] for #{n}")
         end
       @logger.debug("Shortname array: #{shortname.inspect}")
