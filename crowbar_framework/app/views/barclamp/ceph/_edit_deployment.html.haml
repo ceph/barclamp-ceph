@@ -5,6 +5,7 @@
   $(document).ready(function(){
     var constraints = {
       "ceph-mon": { "count": -1 }, 
-      "ceph-store": { "count": -1 } };
+      "ceph-store": { "count": -1 },
+      "ceph-client": { "count": -1 } };
     node_selector($('#drag_drop'), constraints);
   });
