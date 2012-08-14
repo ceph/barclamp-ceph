@@ -32,10 +32,6 @@ debs:
     - libceph1
     - ceph-dbg
 
-gems:
-  pkgs:
-    - open4
-
 locale_additions:
   en:
     nav:
