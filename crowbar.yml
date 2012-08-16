@@ -31,6 +31,7 @@ debs:
     - ceph-common
     - libceph1
     - ceph-dbg
+    - gdisk
 
 locale_additions:
   en:
