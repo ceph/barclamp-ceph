@@ -29,7 +29,6 @@ debs:
   pkgs:
     - ceph
     - ceph-common
-    - libceph1
     - ceph-dbg
     - gdisk
 
