@@ -20,7 +20,9 @@
       },
       "elements": {},
       "element_order": [
-        [ "ceph-mon", "ceph-store", "ceph-client" ]
+        [ "ceph-mon" ],
+        [ "ceph-store" ],
+        [ "ceph-client" ]
       ],
       "config": {
         "environment": "ceph-base-config",
