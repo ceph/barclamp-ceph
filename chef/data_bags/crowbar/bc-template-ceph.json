@@ -22,7 +22,7 @@
       "element_order": [
         [ "ceph-mon" ],
         [ "ceph-store" ],
-        [ "ceph-client" ],
+        [ "ceph-client" ]
       ],
       "config": {
         "environment": "ceph-base-config",
