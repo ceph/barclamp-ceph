@@ -28,9 +28,12 @@ debs:
       - deb http://ceph.com/debian/ precise main
   pkgs:
     - ceph
-    - ceph-common
     - ceph-dbg
+    - ceph-common
+    - ceph-common-dbg
+    - libcephfs1
     - gdisk
+    - libgoogle-perftools0
 
 locale_additions:
   en:
