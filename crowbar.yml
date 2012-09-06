@@ -25,7 +25,7 @@ debs:
       - deb http://ceph.com/debian/ oneiric main
   ubuntu-12.04:
     repos:
-      - deb http://ceph.com/debian/ precise main
+      - deb http://gitbuilder.ceph.com/ceph-deb-precise-x86_64-basic/ref/wip-stable-deploy-features/ precise main
   pkgs:
     - ceph
     - ceph-dbg
