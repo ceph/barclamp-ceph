@@ -24,7 +24,10 @@ class CephService < ServiceObject
     @logger.debug("Ceph create_proposal: entering")
     base = super
 
-    base["attributes"]["ceph"]["config"]["fsid"] = `uuidgen`
+    fsid = `uuidgen`
+    fsid.chomp!
+    
+    base["attributes"]["ceph"]["config"]["fsid"] = fsid
     
     #For testing use only. Will be implemeted into the cookbook. 
     base["attributes"]["ceph"]["monitor-secret"] = `python /opt/dell/bin/monitor-secret.py`    
