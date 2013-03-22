@@ -7,6 +7,9 @@ AES_128_KEY_TYPE = 1
 AES_128_KEY_LEN = 16
 
 def encode(created_nsec, use_entropy):
+    """
+    Encodes a monitor secret and returns it. 
+    """
     NANO = 1000000000
     secs, nsecs = divmod(created_nsec, NANO)
     assert len(use_entropy) == AES_128_KEY_LEN
